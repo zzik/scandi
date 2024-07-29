@@ -1,0 +1,4 @@
+Code does not meet PSR standards
+For delete logic, a separate request is used for each product to delete instead of one.
+There is no main product abstract class but interface, it would be good to see the abstract class and functionality there that could be shared between all other product classes.
+MySQL logic should be handled by objects with properties instead of direct column values. Please use setters and getters to achieve this and don't forget to use them for both save and display logic.

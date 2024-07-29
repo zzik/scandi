@@ -93,17 +93,17 @@ const AddItem = () => {
             required
           >
             <option value="">Select type</option>
-            <option value="size">DVD</option>
-            <option value="weight">Book</option>
-            <option value="dimensions">Furniture</option>
+            <option value="Size">DVD</option>
+            <option value="Weight">Book</option>
+            <option value="Dimensions">Furniture</option>
           </select>
         </div>
         {type && (
           <div>
             <label>
-              {type === "size" && "Size (MB)"}
-              {type === "weight" && "Weight (KG)"}
-              {type === "dimensions" && "Dimensions (HxWxL)"}
+              {type === "Size" && "Size (MB)"}
+              {type === "Weight" && "Weight (KG)"}
+              {type === "Dimensions" && "Dimensions (HxWxL)"}
             </label>
             <input
               type="text"

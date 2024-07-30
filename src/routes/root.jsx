@@ -1,21 +1,23 @@
-import { Link, useLoaderData } from "react-router-dom";
-import Item from "../components/Item";
+import { Link } from "react-router-dom";
 import { getProducts, handleDelete } from "../utils";
+import List from "../components/List";
 
 export default function Root() {
-  const { products } = useLoaderData();
-
   return (
     <>
-      <Link to={"/add"}>ADD ITEM</Link>
-      <button onClick={handleDelete}>MASS DELETE</button>
-      <ol>
-        {products.map((product) => (
-          <li key={product.sku}>
-            <Item product={product} />
-          </li>
-        ))}
-      </ol>
+      <div className="header">
+        <h2 className="title">Product List</h2>
+        <div className="buttons">
+          <Link to={"/add-product"}>ADD</Link>
+          <button onClick={handleDelete}>MASS DELETE</button>
+        </div>
+      </div>
+      <div className="display">
+        <List />
+      </div>
+      <div className="footer">
+        <h2>Scandiweb Test Assignment</h2>
+      </div>
     </>
   );
 }

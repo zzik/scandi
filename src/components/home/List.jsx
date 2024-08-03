@@ -5,9 +5,7 @@ const List = () => {
   const { products } = useLoaderData();
   return (
     <ul>
-      {products
-        .sort((a, b) => a.sku - b.sku)
-        .map((product) => (
+      {products.map((product) => (
           <Item
             key={product.sku}
             sku={product.sku}

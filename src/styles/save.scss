@@ -1,0 +1,48 @@
+.form__container {
+  border: 1px solid black;
+  width: 80%;
+  max-width: 720px;
+  .form__heading {
+    border-bottom: 1px solid black;
+    // width: 100%;
+    padding-left: 16px;
+  }
+  .section__container {
+    padding: 12px;
+  }
+}
+
+.general__data {
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  label {
+    font-size: 0.9em;
+    margin-left: 13px;
+  }
+  input {
+    // border: 0;
+    border-bottom: 1px solid black;
+    padding: 3px;
+    &:active {
+    }
+  }
+}
+.dropdown__container {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    padding: 6px;
+    font-size: 0.9rem;
+}
+/* Responsive styles */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 992px) {
+}

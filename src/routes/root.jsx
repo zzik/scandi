@@ -1,24 +1,14 @@
-import { Link } from "react-router-dom";
-import { getProducts, handleDelete } from "../utils";
-import List from "../components/List";
+import { getProducts } from "../utils";
+import { Header, Footer, Display } from "../components/layout";
+import { PayloadProvider } from "../context/PayloadContext";
 
 export default function Root() {
   return (
-    <>
-      <div className="header">
-        <h2 className="title">Product List</h2>
-        <div className="buttons">
-          <Link to={"/add-product"}>ADD</Link>
-          <button onClick={handleDelete}>MASS DELETE</button>
-        </div>
-      </div>
-      <div className="display">
-        <List />
-      </div>
-      <div className="footer">
-        <h2>Scandiweb Test Assignment</h2>
-      </div>
-    </>
+    <PayloadProvider>
+      <Header />
+      <Display />
+      <Footer />
+    </PayloadProvider>
   );
 }
 

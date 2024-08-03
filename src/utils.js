@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export async function getProducts() {
-  let products = await axios.get("http://localhost/tried/list.php");
+  // let products = await axios.get("http://localhost/tried/list.php");
+  let products = await axios.get("https://github.com/zzik/scandi-server/list.php");
   return products.data;
 }
 
@@ -11,7 +12,8 @@ export const handleDelete = async () => {
     data = Array.from(data).map((el) => el.name);
 
     await axios.post(
-      "http://localhost/tried/delete.php",
+      // "http://localhost/tried/delete.php",
+      "https://github.com/zzik/scandi-server/delete.php",
       { skus: data },
       {
         headers: {
@@ -19,7 +21,8 @@ export const handleDelete = async () => {
         },
       }
     );
-    window.location = "http://localhost:5173";
+    // window.location = "http://localhost:5173";
+    window.location = "https://zzik-scandiweb.netlify.app/";
   } catch (error) {
     console.error("Error deleting products:", error);
   }
@@ -43,7 +46,8 @@ export const testSubmit = async (data) => {
   params.append("length", data.length);
 
   try {
-    await axios.post("http://localhost/tried/add.php", params, {
+    // await axios.post("http://localhost/tried/add.php", params, {
+    await axios.post("https://github.com/zzik/scandi-server/add.php", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -56,7 +60,8 @@ export const testSubmit = async (data) => {
 export const checkSKU = async (sku) => {
   try {
     let check = await axios.get(
-      "http://localhost/tried/check.php",
+      // "http://localhost/tried/check.php",
+      "https://github.com/zzik/scandi-server/check.php",
       { params: { sku } },
       {
         headers: {

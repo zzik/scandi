@@ -1,7 +1,7 @@
 const Item = (product) => {
   return (
     <li className="product">
-      <input className="checkbox" type="checkbox" name={product.sku}></input>
+      <input className="delete-checkbox" type="checkbox" name={product.sku}></input>
       <div className="details">
         <p>{product.sku}</p>
         <p>{product.name}</p>

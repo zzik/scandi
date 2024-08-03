@@ -9,7 +9,7 @@ const Save = () => {
   
   return (
     <>
-      <button onClick={saveLogic}>SAVE</button>
+      <button onClick={saveLogic}>Save</button>
       <button onClick={goHome}>CANCEL</button>
     </>
   );

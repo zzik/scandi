@@ -3,7 +3,7 @@ import { General, Switcher } from "./";
 
 const AddItem = () => {
   return (
-    <div className="form__container" onKeyUp={numericValidation}>
+    <div id="product_form" className="form__container" onKeyUp={numericValidation}>
       <div className="form__heading" >
         <h3>Welcome To Scandiweb</h3>
         <h4>CRUD Form</h4>

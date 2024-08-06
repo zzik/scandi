@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getProducts() {
   // let products = await axios.get("http://localhost/tried/list.php");
-  let products = await axios.get("https://github.com/zzik/scandi-server/list.php");
+  let products = await axios.get("https://urchin-app-gioo8.ondigitalocean.app/list.php");
   return products.data;
 }
 
@@ -47,7 +47,7 @@ export const testSubmit = async (data) => {
 
   try {
     // await axios.post("http://localhost/tried/add.php", params, {
-    await axios.post("https://github.com/zzik/scandi-server/add.php", params, {
+    await axios.post("https://urchin-app-gioo8.ondigitalocean.app/add.php", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -61,7 +61,7 @@ export const checkSKU = async (sku) => {
   try {
     let check = await axios.get(
       // "http://localhost/tried/check.php",
-      "https://github.com/zzik/scandi-server/check.php",
+      "https://urchin-app-gioo8.ondigitalocean.app/check.php",
       { params: { sku } },
       {
         headers: {

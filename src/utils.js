@@ -2,7 +2,8 @@ import axios from "axios";
 
 export async function getProducts() {
   // let products = await axios.get("http://localhost/tried/list.php");
-  let products = await axios.get("https://urchin-app-gioo8.ondigitalocean.app/list.php");
+  let products = await axios.get("https://0603148163.mom/");
+  // let products = await axios.get("https://urchin-app-gioo8.ondigitalocean.app/list.php");
   return products.data;
 }
 
@@ -30,7 +31,6 @@ export const handleDelete = async () => {
 
 export const testSubmit = async (data) => {
   const price = parseFloat(data.price).toFixed(2)
-  console.log({price, type: typeof price})
   const params = new URLSearchParams();
   params.append("sku", data.sku);
   params.append("name", data.name);

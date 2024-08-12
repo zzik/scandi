@@ -5,13 +5,12 @@ export async function getProducts() {
   return products.data;
 }
 
-export const handleDelete = async () => {
+export const massDelete = async () => {
   try {
     let data = document.querySelectorAll("input:checked");
     data = Array.from(data).map((el) => el.name);
 
     await axios.post(
-      // "http://localhost/tried/delete.php",
       "https://0603148163.mom/delete.php",
       { skus: data },
       {
@@ -20,7 +19,6 @@ export const handleDelete = async () => {
         },
       }
     );
-    // window.location = "http://localhost:5173";
     window.location = "https://zzik-scandiweb.netlify.app/";
   } catch (error) {
     console.error("Error deleting products:", error);
@@ -44,7 +42,6 @@ export const testSubmit = async (data) => {
   params.append("length", data.length);
 
   try {
-    // await axios.post("http://localhost/tried/add.php", params, {
     await axios.post("https://0603148163.mom/add.php", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -58,7 +55,6 @@ export const testSubmit = async (data) => {
 export const checkSKU = async (sku) => {
   try {
     let check = await axios.get(
-      // "http://localhost/tried/check.php",
       "https://0603148163.mom/check.php",
       { params: { sku } },
       {

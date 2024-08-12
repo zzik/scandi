@@ -4,7 +4,7 @@ export async function getProducts() {
   // let products = await axios.get("http://localhost/tried/list.php");
   let products = await axios.get("https://0603148163.mom/");
   // let products = await axios.get("https://urchin-app-gioo8.ondigitalocean.app/list.php");
-  return products.data;
+  return products.data.data;
 }
 
 export const handleDelete = async () => {

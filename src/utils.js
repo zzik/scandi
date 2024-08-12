@@ -1,10 +1,8 @@
 import axios from "axios";
 
 export async function getProducts() {
-  // let products = await axios.get("http://localhost/tried/list.php");
-  let products = await axios.get("https://0603148163.mom/");
-  // let products = await axios.get("https://urchin-app-gioo8.ondigitalocean.app/list.php");
-  return products.data.data;
+  let products = await axios.get("https://0603148163.mom/list.php");
+  return products.data;
 }
 
 export const handleDelete = async () => {
@@ -14,7 +12,7 @@ export const handleDelete = async () => {
 
     await axios.post(
       // "http://localhost/tried/delete.php",
-      "https://github.com/zzik/scandi-server/delete.php",
+      "https://0603148163.mom/delete.php",
       { skus: data },
       {
         headers: {
@@ -47,7 +45,7 @@ export const testSubmit = async (data) => {
 
   try {
     // await axios.post("http://localhost/tried/add.php", params, {
-    await axios.post("https://urchin-app-gioo8.ondigitalocean.app/add.php", params, {
+    await axios.post("https://0603148163.mom/add.php", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -61,7 +59,7 @@ export const checkSKU = async (sku) => {
   try {
     let check = await axios.get(
       // "http://localhost/tried/check.php",
-      "https://urchin-app-gioo8.ondigitalocean.app/check.php",
+      "https://0603148163.mom/check.php",
       { params: { sku } },
       {
         headers: {

@@ -108,7 +108,7 @@ export const numericValidation = () => {
 
   filtered.forEach(el => {
     const alertText = `Please, provide the data of indicated type`
-    if (el.value.match(/\D+/g)) {
+    if (el.value.match(/[^0-9.]+/g)) {
       alert(alertText)
       el.value = ''
     }

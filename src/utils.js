@@ -89,6 +89,7 @@ export const saveHandler = (payload) => {
         alert("it exists")
       } else {
         testSubmit(payload)
+        window.location.href = 'https://zzik-scandiweb.netlify.app/'
       }
     }
     );

@@ -45,7 +45,7 @@ export const testSubmit = async (data) => {
   try {
     await axios.post("https://0603148163.mom/add.php", params, {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
     });
   } catch (error) {
@@ -60,7 +60,7 @@ export const checkSKU = async (sku) => {
       { params: { sku } },
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "application/json",
         },
       }
     );

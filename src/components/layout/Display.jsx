@@ -1,9 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { AddItem } from "../add";
+import { List } from '../home'
 
 const Display = () => {
+  let location = useLocation();
+  let current = location.pathname === "/" ? <List/> : <AddItem/>;
+  // let buttons = location.pathname === '/' ? <Delete /> : <Save />
   return (
     <div className="display">
-      <Outlet />
+      {current}
+      {/* <Outlet /> */}
     </div>
   );
 };

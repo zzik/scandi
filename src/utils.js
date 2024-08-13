@@ -19,7 +19,7 @@ export const massDelete = async () => {
         },
       }
     );
-    window.location = "https://zzik-scandiweb.netlify.app/";
+    window.location.href = "https://zzik-scandiweb.netlify.app/";
   } catch (error) {
     console.error("Error deleting products:", error);
   }

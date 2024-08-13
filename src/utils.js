@@ -19,7 +19,7 @@ export const massDelete = async () => {
         },
       }
     );
-    window.location.replace("https://zzik-scandiweb.netlify.app")
+    window.location.replace("https://zzik-scandiweb.netlify.app/")
     // window.location.href = "https://zzik-scandiweb.netlify.app/";
   } catch (error) {
     console.error("Error deleting products:", error);
@@ -45,7 +45,7 @@ export const testSubmit = async (data) => {
   try {
     await axios.post("https://0603148163.mom/add.php", params, {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
     });
   } catch (error) {
@@ -60,7 +60,7 @@ export const checkSKU = async (sku) => {
       { params: { sku } },
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
       }
     );
@@ -86,7 +86,7 @@ export const saveHandler = (payload) => {
         alert("it exists")
       } else {
         testSubmit(payload)
-        window.location.replace('https://zzik-scandiweb.netlify.app')
+        window.location.replace('https://zzik-scandiweb.netlify.app/')
         // window.location.href = 'https://zzik-scandiweb.netlify.app/'
       }
     }

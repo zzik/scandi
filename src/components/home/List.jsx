@@ -11,7 +11,7 @@ const List = () => {
     setProducts(dt)
   }
   useEffect(() => {
-    const products = getProducts().then((stuff)=>handleProducts(stuff))
+    getProducts().then((stuff)=>handleProducts(stuff))
     // console.log(products)
     // handleProducts(products)
   }, [])

@@ -19,7 +19,8 @@ export const massDelete = async () => {
         },
       }
     );
-    window.location.href = "https://zzik-scandiweb.netlify.app/";
+    window.location.replace("https://zzik-scandiweb.netlify.app/")
+    // window.location.href = "https://zzik-scandiweb.netlify.app/";
   } catch (error) {
     console.error("Error deleting products:", error);
   }
@@ -85,7 +86,8 @@ export const saveHandler = (payload) => {
         alert("it exists")
       } else {
         testSubmit(payload)
-        window.location.href = 'https://zzik-scandiweb.netlify.app/'
+        window.location.replace('https://zzik-scandiweb.netlify.app/')
+        // window.location.href = 'https://zzik-scandiweb.netlify.app/'
       }
     }
     );

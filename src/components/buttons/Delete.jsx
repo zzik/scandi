@@ -8,7 +8,7 @@ const Delete = () => {
     {/* <button onClick={addRoute}>ADD</button> */}
     {/* <label htmlFor="delete">MASS DELETE</label>
     <input type='button' onClick={massDelete} name='delete' /> */}
-    <button onClick={massDelete}>MASS DELETE</button>
+    <button onClick={()=>massDelete()}>MASS DELETE</button>
   </>
 }
 

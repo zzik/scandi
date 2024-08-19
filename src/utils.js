@@ -86,7 +86,7 @@ export const saveHandler = (payload) => {
         alert("it exists")
       } else {
         testSubmit(payload)
-        window.location.replace('https://zzik-scandiweb.netlify.app/')
+        window.location.href = 'https://zzik-scandiweb.netlify.app/'
         // window.location.href = 'https://zzik-scandiweb.netlify.app/'
       }
     }

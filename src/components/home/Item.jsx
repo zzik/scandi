@@ -7,7 +7,7 @@ const Item = (product) => {
         <p>{product.name}</p>
         <p>{product.price} $</p>
         <p>
-          {product.attribute_name}: {product.attribute_value}
+          {product.attribute_name} : {product.attribute_value}
         </p>
       </div>
     </li>

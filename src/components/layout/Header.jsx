@@ -1,10 +1,10 @@
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Delete, Save } from "../buttons";
 
 const Header = () => {
-  // let location = useLocation();
-  let heading = window.location.pathname === "/" ? "Product List" : "Product Add";
-  let buttons = window.location.pathname === '/' ? <Delete /> : <Save />
+  let location = useLocation();
+  let heading = location.pathname === "/" ? "Product List" : "Product Add";
+  let buttons = location.pathname === '/' ? <Delete /> : <Save />
   
   return (
     <div className="header">

@@ -91,7 +91,11 @@ export const saveHandler = (payload) => {
   //     }
   //   }
   //   );
-  checkEmpty() ? alert("Please, submit required data") : window.location.replace('https://zzik-scandiweb.netlify.app/')
+  const testFun = () => {
+    testSubmit(payload)
+    window.location.href = 'https://zzik-scandiweb.netlify.app/'
+  }
+  checkEmpty() ? alert("Please, submit required data") : testFun()
   // checkEmpty() ? alert("Please, submit required data") : handleSKU();
 };
 

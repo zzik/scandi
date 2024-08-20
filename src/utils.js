@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export async function getProducts() {
-  let products = await axios.get("http://64.227.127.175/list.php");
+  let products = await axios.get("https://0603148163.mom/list.php");
   return products.data;
 }
 
@@ -11,7 +11,7 @@ export const massDelete = async () => {
     data = Array.from(data).map((el) => el.name);
 
     await axios.post(
-      "http://64.227.127.175/delete.php",
+      "https://0603148163.mom/delete.php",
       { skus: data },
       {
         headers: {
@@ -43,7 +43,7 @@ export const testSubmit = async (data) => {
   params.append("length", data.length);
 
   try {
-    await axios.post("http://64.227.127.175/add.php", params, {
+    await axios.post("https://0603148163.mom/add.php", params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -56,7 +56,7 @@ export const testSubmit = async (data) => {
 export const checkSKU = async (sku) => {
   try {
     let check = await axios.get(
-      "http://64.227.127.175/check.php",
+      "https://0603148163.mom/check.php",
       { params: { sku } },
       {
         headers: {
@@ -80,18 +80,19 @@ export const checkEmpty = () => {
 };
 
 export const saveHandler = (payload) => {
-  const handleSKU = () =>
-    checkSKU(payload.sku).then((result) => {
-      if (result) {
-        alert("it exists")
-      } else {
-        testSubmit(payload)
-        window.location.href = 'https://zzik-scandiweb.netlify.app/'
-        // window.location.href = 'https://zzik-scandiweb.netlify.app/'
-      }
-    }
-    );
-  checkEmpty() ? alert("Please, submit required data") : handleSKU();
+  // const handleSKU = () =>
+  //   checkSKU(payload.sku).then((result) => {
+  //     if (result) {
+  //       alert("it exists")
+  //     } else {
+  //       testSubmit(payload)
+  //       window.location.href = 'https://zzik-scandiweb.netlify.app/'
+  //       // window.location.href = 'https://zzik-scandiweb.netlify.app/'
+  //     }
+  //   }
+  //   );
+  checkEmpty() ? alert("Please, submit required data") : window.location.replace('https://zzik-scandiweb.netlify.app/')
+  // checkEmpty() ? alert("Please, submit required data") : handleSKU();
 };
 
 export const numericValidation = () => {

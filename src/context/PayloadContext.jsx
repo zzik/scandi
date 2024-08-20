@@ -4,10 +4,14 @@ export const PayloadContext = createContext();
 
 export const PayloadProvider = ({ children }) => {
   const [payload, setPayload] = useState({
-    sku:undefined, name: undefined, price: undefined, type:undefined });
+    sku: undefined,
+    name: undefined,
+    price: undefined,
+    type: undefined,
+  });
 
   const updatePayload = (data) => {
-    setPayload(oldPayload => ({...oldPayload, ...data}));
+    setPayload((oldPayload) => ({ ...oldPayload, ...data }));
   };
 
   return (
@@ -21,4 +25,3 @@ export const PayloadProvider = ({ children }) => {
     </PayloadContext.Provider>
   );
 };
-

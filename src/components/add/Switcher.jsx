@@ -23,7 +23,7 @@ const Switcher = () => {
   return (
     <div className="section__container">
       <select id="productType" className="dropdown__container" onChange={handleSelectChange} value={selectedOption}>
-        {/* <option value="">Select one</option> */}
+        <option value="">Select one</option>
         <option value="Book">Book</option>
         <option value="DVD">DVD</option>
         <option value="Furniture">Furniture</option>
